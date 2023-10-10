@@ -15,6 +15,11 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+.img--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .main-img-sm {
   width: 100%;
 }
@@ -25,6 +30,8 @@ h1 {
 content {
   display: block;
   padding: 1.5em;
+  max-width: 375px;
+  margin: 0 auto;
 }
 
 ul {
@@ -87,7 +94,6 @@ li {
   .img--container {
     order: 1;
     width: 50%;
-    display: flex;
   }
   .main-img-sm {
     display: none;
@@ -102,5 +108,6 @@ li {
     padding-left: 2em;
     display: flex;
     align-items: center;
+    max-width: unset;
   }
 }
