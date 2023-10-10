@@ -10,6 +10,21 @@
 body {
   color: #242742;
 }
+
+p {
+  line-height: 1.5em;
+}
+
+button {
+  background-color: #242742;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 1em 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 h1 {
   font-size: 40px;
   margin-bottom: 0.5em;
@@ -27,8 +42,7 @@ h1 {
   display: none;
 }
 
-content {
-  display: block;
+.signup-form--container {
   padding: 1.5em;
   max-width: 375px;
   margin: 0 auto;
@@ -58,21 +72,27 @@ li {
   margin: 0.5em 0 1em;
 }
 
-#form button {
-  background-color: #242742;
-  color: white;
-  border: none;
-  width: 100%;
-  padding: 1.125em 0;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 #form .error {
   color: red;
   font-size: 12px;
   margin-top: -1em;
   margin-bottom: 1em;
+}
+
+.success--container {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.content__success {
+  padding-top: 6em;
+}
+
+.success__image--container {
+  margin-bottom: 1.5em;
 }
 
 @media (min-width: 700px) {
@@ -110,11 +130,21 @@ li {
     max-width: 100%;
   }
 
-  content {
+  .signup-form--container {
     width: 55%;
     padding-left: 2em;
     display: flex;
     align-items: center;
     max-width: unset;
+  }
+
+  .success--container {
+    height: unset;
+    padding-top: 1.5em 2.5em;
+  }
+
+  .content__success {
+    padding: 0;
+    margin-bottom: 1.5em;
   }
 }
