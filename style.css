@@ -25,6 +25,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: linear-gradient(#ff6a3a, #ff527b);
+}
+
 h1 {
   font-size: 40px;
   margin-bottom: 0.5em;
@@ -72,11 +76,25 @@ li {
   margin: 0.5em 0 1em;
 }
 
-#form .error {
-  color: red;
+#form input:focus {
+  border-color: #242742;
+}
+
+#form input.error {
+  background-color: color-mix(in srgb, #ff6155 15%, white);
+  color: #ff6155;
+  border-color: #ff6155;
+}
+
+.form__title--container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error--message {
+  color: #ff6155;
   font-size: 12px;
-  margin-top: -1em;
-  margin-bottom: 1em;
+  font-weight: 700;
 }
 
 .success--container {

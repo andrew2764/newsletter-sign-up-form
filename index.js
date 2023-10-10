@@ -5,20 +5,17 @@ const emailRegex =
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  document.querySelector("#form .error")?.remove();
+  document.querySelector(".error--message")?.remove();
   const emailInput = document.querySelector("#form input");
-  if (!emailInput.value) {
-    emailInput.insertAdjacentHTML(
-      "afterend",
-      `<p class="error">Please enter your email address</p>`
-    );
-    return;
-  }
-  if (!emailRegex.test(emailInput.value)) {
-    emailInput.insertAdjacentHTML(
-      "afterend",
-      `<p class="error">Please enter a valid email address</p>`
-    );
+  emailInput.classList.remove("error");
+  if (!emailInput.value || !emailRegex.test(emailInput.value)) {
+    document
+      .querySelector(".form__title")
+      .insertAdjacentHTML(
+        "afterend",
+        `<p class="error--message">Please enter a valid email address</p>`
+      );
+    emailInput.classList.add("error");
     return;
   }
   mainElem.style.maxWidth = "500px";
