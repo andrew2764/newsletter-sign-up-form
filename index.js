@@ -26,7 +26,7 @@ form.addEventListener("submit", (e) => {
             class="img__success"></div>
         <h1>Thanks for subscribing!</h1>
         <p>
-          A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
+          A confirmation email has been sent to <strong>${emailInput.value}</strong>.
           Please open it and click the button inside to confirm your subscription.
         </p>
       </div>
