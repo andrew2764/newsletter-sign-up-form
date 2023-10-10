@@ -15,8 +15,11 @@ h1 {
   margin-bottom: 0.5em;
 }
 
-.main-img {
+.main-img-sm {
   width: 100%;
+}
+.main-img-lg {
+  display: none;
 }
 
 content {
@@ -56,4 +59,48 @@ li {
   padding: 1.125em 0;
   border-radius: 8px;
   cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  body {
+    background-color: #36384d;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    background-color: white;
+    display: flex;
+    width: 90%;
+    padding: 1em;
+    border-radius: 16px;
+    gap: 40px;
+    max-width: 925px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .img--container {
+    order: 1;
+    width: 50%;
+    display: flex;
+  }
+  .main-img-sm {
+    display: none;
+  }
+  .main-img-lg {
+    display: block;
+    max-width: 100%;
+  }
+
+  content {
+    width: 55%;
+    padding-left: 2em;
+    display: flex;
+    align-items: center;
+  }
 }
